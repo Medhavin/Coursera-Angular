@@ -2,36 +2,41 @@
 
 angular.module('confusionApp',[])
 
-        .controller('menuController', function(){
+        .controller('MenuController', ['$scope', function($scope){
 
             var tab = 1;
-            this.tab = tab;
+            $scope.tab = tab;
 
-            this.select = function(setTab){
-                this.tab = setTab;
+            $scope.select = function(setTab){
+                $scope.tab = setTab;
 
                 if (setTab === 2){
-                    this.filtText = "appetizer";
+                    $scope.filtText = "appetizer";
                 }
                 else if  (setTab === 3){
-                    this.filtText = "mains";
+                    $scope.filtText = "mains";
                 }
                 else if  (setTab === 4){
-                    this.filtText = "dessert";
+                   $scope.filtText = "dessert";
                 }
                 else{
-                    this.filtText = "";
+                    $scope.filtText = "";
                 }
             };
 
-            this.isSelected = function(checkTab){
-                return (checkTab === this.tab);
+            $scope.isSelected = function(checkTab){
+                return (checkTab === $scope.tab);
             };
 
-            var filtText = "";
-            this.filtText = filtText;
+            $scope.filtText = "";
 
-            var dishes=[
+            $scope.showDetails = false;
+
+            $scope.toggleDetails = function() {
+                $scope.showDetails = !$scope.showDetails;
+            };
+
+            $scope.dishes=[
                 {
                    name:'Uthapizza',
                    image: 'images/uthapizza.png',
@@ -70,6 +75,4 @@ angular.module('confusionApp',[])
                 }
             ];
 
-            this.dishes = dishes;
-
-        });
+        }]);
