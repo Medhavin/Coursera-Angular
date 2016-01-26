@@ -2,8 +2,6 @@
 
 angular.module('confusionApp', ['ui.router'])
 
-angular.module('confusionApp', ['ui.router'])
-Next introduce the config for the UI router:
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
                     // route for the home page
@@ -65,7 +63,7 @@ Next introduce the config for the UI router:
                 }
             });
 
-            
+
             $urlRouterProvider.otherwise('/');
     })	
 
