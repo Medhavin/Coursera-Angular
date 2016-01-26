@@ -53,7 +53,7 @@ angular.module('confusionApp')
                 
                 console.log($scope.feedback);
                 
-                if ($scope.feedback.agree && ($scope.feedback.mychannel == "")) {
+                if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
                     console.log('incorrect');
                 }
@@ -77,7 +77,7 @@ angular.module('confusionApp')
 
         .controller('DishCommentController', ['$scope', function($scope) {
             
-            $scope.feedback = {author : "", rating : 5, comment : "", date : ""}
+            $scope.feedback = {author : "", rating : 5, comment : "", date : ""};
             //Step 1: Create a JavaScript object to hold the comment from the form
             
             $scope.submitComment = function () {
@@ -93,8 +93,8 @@ angular.module('confusionApp')
                 $scope.commentForm.$setPristine();
                 
                 //Step 5: reset your JavaScript object that holds your comment
-                $scope.feedback = {name : "", rating : 5, comment : "", date : ""}
-            }
+                $scope.feedback = {name : "", rating : 5, comment : "", date : ""};
+            };
         }])
 
 ;
