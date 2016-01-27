@@ -6,7 +6,16 @@
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h4>Implement the Featured Dish Here</h4>
+				<!-- <h4>Implement thwe Featured Dish Here</h4> -->
+                <div class="media">
+                  <div class="media-left">
+                      <img class="media-object" src="{{featureddish.image}}" alt="{{featureddish.name}}">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">{{featureddish.name}} <span class="label label-danger">{{featureddish.label}}</span> <span class="badge">{{featureddish.price}}<span></h4>
+                    <p>{{featureddish.description}}</p>
+                  </div>
+                </div>
             </div>
         </div>
 
@@ -17,7 +26,16 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
-				<h4>Implement the Promotion Here</h4>
+				<!-- <h4>Implement the Promotion Here</h4> -->
+                <div class="media">
+                  <div class="media-left">
+                      <img class="media-object" src="{{monthspromotion.image}}" alt="{{monthspromotion.name}}">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">{{monthspromotion.name}} <span class="label label-danger">{{monthspromotion.label}}</span> <span class="badge">{{monthspromotion.price}}</span></h4>
+                    <p>{{monthspromotion.description}}</p>
+                  </div>
+                </div>
             </div>
         </div>
 
@@ -27,7 +45,17 @@
                 <h3 align=center>Meet our Culinary Specialists</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h4>Implement the Executive Chef Info Here</h4>
+				<!-- <h4>Implement the Executive Chef Info Here</h4> -->
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="{{executivechef.image}}" alt="{{executivechef.name}}">
+                    </div>
+                    <div class="media-body">
+                        <span class="h4 media-heading">{{executivechef.name}} </span>
+                        <span>{{executivechef.designation}}<span>
+                        <p>{{executivechef.description}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
