@@ -1,6 +1,9 @@
     <div class="container">
         <div class="row row-content" ng-controller="DishDetailController">
-            <div class="col-xs-12">
+            <div class="col-xs-12" ng-if="!showMenu">
+                <h3>{{message}}</h3>
+            </div>
+            <div class="col-xs-12" ng-if="showDish">
                 <!-- <p>Put the dish details here</p>
                 <p>You should have completed this in Assignment 1</p> -->
                 <button class="btn btn-xs btn-primary pull-right"
