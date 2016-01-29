@@ -7,7 +7,7 @@
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
                 <div ng-if="!showDish">
-                    <h3>{{message}}</h3>
+                    <h3>{{message1}}</h3>
                 </div>
 				<!-- <h4>Implement thwe Featured Dish Here</h4> -->
                 <div class="media" ng-if="showDish">
@@ -29,8 +29,11 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
+                <div ng-if="!showPromotion">
+                    <h3>{{message2}}</h3>
+                </div>
 				<!-- <h4>Implement the Promotion Here</h4> -->
-                <div class="media">
+                <div class="media" ng-if="showPromotion">
                   <div class="media-left">
                       <img class="media-object" src="{{monthspromotion.image}}" alt="{{monthspromotion.name}}">
                   </div>
@@ -48,8 +51,11 @@
                 <h3 align=center>Meet our Culinary Specialists</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div ng-if="!showChef">
+                    <h3>{{message3}}</h3>
+                </div>
 				<!-- <h4>Implement the Executive Chef Info Here</h4> -->
-                <div class="media">
+                <div class="media" ng-if="showChef">
                     <div class="media-left">
                         <img class="media-object" src="{{executivechef.image}}" alt="{{executivechef.name}}">
                     </div>
